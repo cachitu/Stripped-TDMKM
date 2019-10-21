@@ -186,18 +186,18 @@ public extension ScriptFactory.HashedTimeLockedContract {
     }
 
     // convenience
-    public static func build(recipient: Address, sender: Address, lockIntervalSinceNow: TimeInterval, hash: Data, hashOp: HashOperator) -> Script? {
+    static func build(recipient: Address, sender: Address, lockIntervalSinceNow: TimeInterval, hash: Data, hashOp: HashOperator) -> Script? {
         let lockDate = Date(timeIntervalSinceNow: lockIntervalSinceNow)
         return build(recipient: recipient, sender: sender, lockDate: lockDate, hash: hash, hashOp: hashOp)
     }
 
-    public static func build(recipient: Address, sender: Address, lockIntervalSinceNow: TimeInterval, secret: Data, hashOp: HashOperator) -> Script? {
+    static func build(recipient: Address, sender: Address, lockIntervalSinceNow: TimeInterval, secret: Data, hashOp: HashOperator) -> Script? {
         let hash = hashOp.hash(secret)
         let lockDate = Date(timeIntervalSinceNow: lockIntervalSinceNow)
         return build(recipient: recipient, sender: sender, lockDate: lockDate, hash: hash, hashOp: hashOp)
     }
 
-    public static func build(recipient: Address, sender: Address, lockDate: Date, secret: Data, hashOp: HashOperator) -> Script? {
+    static func build(recipient: Address, sender: Address, lockDate: Date, secret: Data, hashOp: HashOperator) -> Script? {
         let hash = hashOp.hash(secret)
         return build(recipient: recipient, sender: sender, lockDate: lockDate, hash: hash, hashOp: hashOp)
     }
