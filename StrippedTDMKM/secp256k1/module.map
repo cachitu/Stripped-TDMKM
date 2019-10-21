@@ -1,0 +1,4 @@
+module Secp251k1 [system] {
+    header "/StrippedTDMKM/StrippedTDMKM/secp256k1/Classes/secp256k1/include/secp256k1.h"
+    export *
+}
