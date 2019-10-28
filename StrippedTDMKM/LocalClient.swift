@@ -7,6 +7,57 @@
 //
 
 import Foundation
+import CryptoKit
+import CommonCrypto
+
+public class SeedFactory {
+    
+    var derivedKeyData: Data?
+    
+    func createSeed(mnemonic: String) -> Data {
+        guard let salt = ("mnemonic").decomposedStringWithCompatibilityMapping.data(using: .utf8) else {
+            fatalError("Nomalizing salt failed in \(self)")
+        }
+        return pbkdf2SHA512(password: mnemonic, salt: salt, keyByteCount: 64, rounds: 2048)!
+    }
+
+    func pbkdf2SHA512(password: String, salt: Data, keyByteCount: Int, rounds: Int) -> Data? {
+        return pbkdf2(hash:CCPBKDFAlgorithm(kCCPRFHmacAlgSHA512), password:password, salt: salt, keyByteCount:keyByteCount, rounds:rounds)
+    }
+    
+    func pbkdf2(hash :CCPBKDFAlgorithm, password: String, salt: Data, keyByteCount: Int, rounds: Int) -> Data? {
+        
+        derivedKeyData = Data(repeating:0, count:keyByteCount)
+
+        guard let data = derivedKeyData else { return nil }
+        
+        let passwordData = password.data(using:String.Encoding.utf8)!
+        
+        let _ = derivedKeyData!.withUnsafeMutableBytes { (derivedKeyBytes: UnsafeMutableRawBufferPointer) -> Int in
+            
+            let unsafeDBufferPointer = derivedKeyBytes.bindMemory(to: UInt8.self)
+            let unsafeDPointer = unsafeDBufferPointer.baseAddress!
+
+            salt.withUnsafeBytes { (saltBytes: UnsafeRawBufferPointer) in
+                
+                let unsafeBufferPointer = saltBytes.bindMemory(to: UInt8.self)
+                let unsafePointer = unsafeBufferPointer.baseAddress!
+                
+                CCKeyDerivationPBKDF(
+                    CCPBKDFAlgorithm(kCCPBKDF2),
+                    password, passwordData.count,
+                    unsafePointer, salt.count,
+                    hash,
+                    UInt32(rounds),
+                    unsafeDPointer, data.count)
+            }
+            
+            return 0
+        }
+
+        return derivedKeyData
+    }
+}
 
 public class LocalClient {
     
@@ -15,7 +66,12 @@ public class LocalClient {
     func test() {
         let mnemonic = "century possible car impact mutual grace place bomb drip expand search cube border elite ensure draft immune warrior route steak cram confirm kit sudden"
         
-        let seed = Mnemonic.createSeed(mnemonic: mnemonic)
+ 
+        //let seed = Mnemonic_kk.createSeed(mnemonic: mnemonic, withPassphrase: "")
+        //print(seed.base64EncodedString())
+        
+        let seed = SeedFactory().createSeed(mnemonic: mnemonic)
+
         let wallet = Wallet(seed: seed, coin: coinType)
         let account = wallet.generateAccount()
         
@@ -358,5 +414,54 @@ extension PropertyLoopable {
         }
         
         return result
+    }
+}
+
+enum HmacAlgorithm {
+    case sha1, md5, sha256, sha384, sha512, sha224
+    var algorithm: CCHmacAlgorithm {
+        var alg = 0
+        switch self {
+        case .sha1:
+            alg = kCCHmacAlgSHA1
+        case .md5:
+            alg = kCCHmacAlgMD5
+        case .sha256:
+            alg = kCCHmacAlgSHA256
+        case .sha384:
+            alg = kCCHmacAlgSHA384
+        case .sha512:
+            alg = kCCHmacAlgSHA512
+        case .sha224:
+            alg = kCCHmacAlgSHA224
+        }
+        return CCHmacAlgorithm(alg)
+    }
+    var digestLength: Int {
+        var len: Int32 = 0
+        switch self {
+        case .sha1:
+            len = CC_SHA1_DIGEST_LENGTH
+        case .md5:
+            len = CC_MD5_DIGEST_LENGTH
+        case .sha256:
+            len = CC_SHA256_DIGEST_LENGTH
+        case .sha384:
+            len = CC_SHA384_DIGEST_LENGTH
+        case .sha512:
+            len = CC_SHA512_DIGEST_LENGTH
+        case .sha224:
+            len = CC_SHA224_DIGEST_LENGTH
+        }
+        return Int(len)
+    }
+}
+
+extension String {
+    func hmac(algorithm: HmacAlgorithm, key: String) -> String {
+        var digest = [UInt8](repeating: 0, count: algorithm.digestLength)
+        CCHmac(algorithm.algorithm, key, key.count, self, self.count, &digest)
+        let data = Data(digest)
+        return data.map { String(format: "%02hhx", $0) }.joined()
     }
 }

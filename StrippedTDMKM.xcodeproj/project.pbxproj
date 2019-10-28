@@ -247,6 +247,7 @@
 		4678A3ED22F4265F0055DE0A /* UtxoSelectorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678A35122F4265E0055DE0A /* UtxoSelectorInterface.swift */; };
 		4678A3EE22F4265F0055DE0A /* UtxoTransactionSignerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678A35222F4265E0055DE0A /* UtxoTransactionSignerInterface.swift */; };
 		4678A3FA22F4328E0055DE0A /* LocalClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678A3F922F4328E0055DE0A /* LocalClient.swift */; };
+		EE21551B23642A6C005ACF41 /* CryptoTokenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE21551A23642A6C005ACF41 /* CryptoTokenKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -541,10 +542,28 @@
 		4678A35222F4265E0055DE0A /* UtxoTransactionSignerInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtxoTransactionSignerInterface.swift; sourceTree = "<group>"; };
 		4678A3F822F4318C0055DE0A /* StrippedTDMKM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StrippedTDMKM-Bridging-Header.h"; sourceTree = "<group>"; };
 		4678A3F922F4328E0055DE0A /* LocalClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalClient.swift; sourceTree = "<group>"; };
+		EE21551A23642A6C005ACF41 /* CryptoTokenKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoTokenKit.framework; path = System/Library/Frameworks/CryptoTokenKit.framework; sourceTree = SDKROOT; };
+		EE215534236435B0005ACF41 /* blablaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blablaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE21553F236435B0005ACF41 /* blablaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blablaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4678A02722F420590055DE0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE21551B23642A6C005ACF41 /* CryptoTokenKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE215531236435B0005ACF41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE21553C236435B0005ACF41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -559,6 +578,7 @@
 			children = (
 				4678A02C22F420590055DE0A /* StrippedTDMKM */,
 				4678A02B22F420590055DE0A /* Products */,
+				EE21551923642A6C005ACF41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -566,6 +586,8 @@
 			isa = PBXGroup;
 			children = (
 				4678A02A22F420590055DE0A /* StrippedTDMKM.app */,
+				EE215534236435B0005ACF41 /* blablaTests.xctest */,
+				EE21553F236435B0005ACF41 /* blablaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1275,6 +1297,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		EE21551923642A6C005ACF41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE21551A23642A6C005ACF41 /* CryptoTokenKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1295,18 +1325,60 @@
 			productReference = 4678A02A22F420590055DE0A /* StrippedTDMKM.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EE215533236435B0005ACF41 /* blablaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE215549236435B0005ACF41 /* Build configuration list for PBXNativeTarget "blablaTests" */;
+			buildPhases = (
+				EE215530236435B0005ACF41 /* Sources */,
+				EE215531236435B0005ACF41 /* Frameworks */,
+				EE215532236435B0005ACF41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = blablaTests;
+			productName = blablaTests;
+			productReference = EE215534236435B0005ACF41 /* blablaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE21553E236435B0005ACF41 /* blablaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE21554C236435B0005ACF41 /* Build configuration list for PBXNativeTarget "blablaUITests" */;
+			buildPhases = (
+				EE21553B236435B0005ACF41 /* Sources */,
+				EE21553C236435B0005ACF41 /* Frameworks */,
+				EE21553D236435B0005ACF41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = blablaUITests;
+			productName = blablaUITests;
+			productReference = EE21553F236435B0005ACF41 /* blablaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4678A02222F420590055DE0A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1030;
+				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Calin Chitu";
 				TargetAttributes = {
 					4678A02922F420590055DE0A = {
 						CreatedOnToolsVersion = 10.3;
+					};
+					EE215533236435B0005ACF41 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = EE21551F236435AC005ACF41;
+					};
+					EE21553E236435B0005ACF41 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = EE21551F236435AC005ACF41;
 					};
 				};
 			};
@@ -1324,6 +1396,8 @@
 			projectRoot = "";
 			targets = (
 				4678A02922F420590055DE0A /* StrippedTDMKM */,
+				EE215533236435B0005ACF41 /* blablaTests */,
+				EE21553E236435B0005ACF41 /* blablaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1336,6 +1410,20 @@
 				4678A03822F4205A0055DE0A /* LaunchScreen.storyboard in Resources */,
 				4678A03522F4205A0055DE0A /* Assets.xcassets in Resources */,
 				4678A03322F420590055DE0A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE215532236435B0005ACF41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE21553D236435B0005ACF41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1586,6 +1674,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE215530236435B0005ACF41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE21553B236435B0005ACF41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -1764,6 +1866,92 @@
 			};
 			name = Release;
 		};
+		EE21554A236435B0005ACF41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = blablaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = test.blablaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blabla.app/Contents/MacOS/blabla";
+			};
+			name = Debug;
+		};
+		EE21554B236435B0005ACF41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = blablaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = test.blablaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blabla.app/Contents/MacOS/blabla";
+			};
+			name = Release;
+		};
+		EE21554D236435B0005ACF41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = blablaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = test.blablaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = blabla;
+			};
+			name = Debug;
+		};
+		EE21554E236435B0005ACF41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = blablaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = test.blablaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = blabla;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1781,6 +1969,24 @@
 			buildConfigurations = (
 				4678A03D22F4205B0055DE0A /* Debug */,
 				4678A03E22F4205B0055DE0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE215549236435B0005ACF41 /* Build configuration list for PBXNativeTarget "blablaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE21554A236435B0005ACF41 /* Debug */,
+				EE21554B236435B0005ACF41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE21554C236435B0005ACF41 /* Build configuration list for PBXNativeTarget "blablaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE21554D236435B0005ACF41 /* Debug */,
+				EE21554E236435B0005ACF41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

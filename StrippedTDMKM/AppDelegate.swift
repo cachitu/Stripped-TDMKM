@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CryptoKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,6 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("---- iris ---")
         client.coinType = .iris
         client.test()
+        
+        if SecureEnclave.isAvailable  {
+            print("we good")
+        }
         return true
     }
 
