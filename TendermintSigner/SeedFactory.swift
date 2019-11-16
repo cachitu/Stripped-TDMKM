@@ -14,6 +14,7 @@ public class SeedFactory {
     
     var derivedKeyData: Data?
     
+    
     func createSeed(mnemonic: String) -> Data {
         guard let salt = ("mnemonic").decomposedStringWithCompatibilityMapping.data(using: .utf8) else {
             fatalError("Nomalizing salt failed in \(self)")
