@@ -58,7 +58,7 @@ public struct PrivateKey {
     
     public func get() -> String {
         switch self.coin {
-        case .cosmos, .terra, .iris, .kava:
+        case .cosmos, .terra, .iris, .kava, .bitsong:
             return self.raw.toHexString()
        }
     }
