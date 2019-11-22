@@ -32,6 +32,8 @@ FOUNDATION_EXPORT const unsigned char TendermintSignerVersionString[];
 #import "secp256k1.h"
 #import "secp256k1_ecdh.h"
 #import "secp256k1_recovery.h"
+#import "secp256k1_main.h"
+#import "secp256k1-config.h"
 
 FOUNDATION_EXPORT double secp256k1VersionNumber;
 FOUNDATION_EXPORT const unsigned char secp256k1VersionString[];
