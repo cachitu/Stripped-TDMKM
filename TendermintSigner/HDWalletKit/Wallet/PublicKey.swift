@@ -55,7 +55,7 @@ public struct PublicKey {
         case .terra:
             return generateTdmValidator(prefix: "terra")
         case .iris:
-            return generateTdmValidator(prefix: "iaa")
+            return generateTdmValidator(prefix: "", customPrefix: "iva")
         case .kava:
             return generateTdmValidator(prefix: "kava")
         case .bitsong:
@@ -96,11 +96,14 @@ public struct PublicKey {
         return pubAddress
     }
 
-    func generateTdmValidator(prefix: String) -> String {
+    func generateTdmValidator(prefix: String, customPrefix: String? = nil) -> String {
         
         let publicKey = getPublicKey(compressed: true)
         let payload = RIPEMD160.hash(publicKey.sha256()).toHexString()
-        let address = Bech32.encode1(Data(hex: payload), prefix: prefix + "valoper")
+        var address = Bech32.encode1(Data(hex: payload), prefix: prefix + "valoper")
+        if let custom = customPrefix {
+            address = Bech32.encode1(Data(hex: payload), prefix: custom)
+        }
         
         return address
     }
