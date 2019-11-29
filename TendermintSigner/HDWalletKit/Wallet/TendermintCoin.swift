@@ -11,6 +11,7 @@ import Foundation
 public enum TendermintCoin {
     case cosmos
     case terra
+    case terra_118
     case iris
     case kava
     case bitsong
@@ -41,7 +42,7 @@ public enum TendermintCoin {
         switch self {
         case .cosmos:
             return "cosmos"
-        case .terra:
+        case .terra, .terra_118:
             return "terra"
         case .iris:
             return "iaa"
@@ -55,8 +56,9 @@ public enum TendermintCoin {
     
     public var coinType: UInt32 {
         switch self {
-        case .cosmos, .iris, .terra, .kava, .bitsong:
+        case .cosmos, .iris, .kava, .bitsong, .terra_118:
             return 118
+        case .terra: return 330
         }
     }
     
@@ -65,7 +67,7 @@ public enum TendermintCoin {
         case .cosmos: return "cosmos"
         case .kava: return "kava"
         case .iris: return "iris"
-        case .terra: return "terra"
+        case .terra, .terra_118: return "terra"
         case .bitsong: return "bitsong"
         }
     }

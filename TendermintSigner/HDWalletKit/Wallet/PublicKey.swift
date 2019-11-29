@@ -22,7 +22,7 @@ public struct PublicKey {
         switch coin {
         case .cosmos:
             return generateTdmAddress(prefix: "cosmos")
-        case .terra:
+        case .terra, .terra_118:
             return generateTdmAddress(prefix: "terra")
         case .iris:
             return generateTdmAddress(prefix: "iaa")
@@ -37,7 +37,7 @@ public struct PublicKey {
         switch coin {
         case .cosmos:
             return generateTdmPublicAddress(prefix: "cosmos")
-        case .terra:
+        case .terra, .terra_118:
             return generateTdmPublicAddress(prefix: "terra")
         case .iris:
             return generateTdmPublicAddress(prefix: "iaa")
@@ -52,7 +52,7 @@ public struct PublicKey {
         switch coin {
         case .cosmos:
             return generateTdmValidator(prefix: "cosmos")
-        case .terra:
+        case .terra, .terra_118:
             return generateTdmValidator(prefix: "terra")
         case .iris:
             return generateTdmValidator(prefix: "", customPrefix: "iva")
@@ -67,7 +67,7 @@ public struct PublicKey {
         switch coin {
         case .cosmos:
             return generateTdmPublicValidator(prefix: "cosmos")
-        case .terra:
+        case .terra, .terra_118:
             return generateTdmPublicValidator(prefix: "terra")
         case .iris:
             return generateTdmPublicValidator(prefix: "iaa")
