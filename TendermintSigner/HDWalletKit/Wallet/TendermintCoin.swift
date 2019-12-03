@@ -13,6 +13,7 @@ public enum TendermintCoin {
     case terra
     case terra_118
     case iris
+    case iris_fuxi
     case kava
     case bitsong
     
@@ -38,25 +39,26 @@ public enum TendermintCoin {
         return 0x80
     }
     
-    public var addressPrefix: String {
-        switch self {
-        case .cosmos:
-            return "cosmos"
-        case .terra, .terra_118:
-            return "terra"
-        case .iris:
-            return "iaa"
-       case .bitsong:
-           return "bitsong"
-       default:
-            return ""
-        }
-    }
-    
+//    public var addressPrefix: String {
+//        switch self {
+//        case .cosmos:
+//            return "cosmos"
+//        case .terra, .terra_118:
+//            return "terra"
+//        case .iris:
+//            return "iaa"
+//        case .iris_fuxi:
+//            return "ifa"
+//        case .bitsong:
+//            return "bitsong"
+//        case .kava:
+//            return "kava"
+//        }
+//    }
     
     public var coinType: UInt32 {
         switch self {
-        case .cosmos, .iris, .kava, .bitsong, .terra_118:
+        case .cosmos, .iris, .iris_fuxi,.kava, .bitsong, .terra_118:
             return 118
         case .terra: return 330
         }
@@ -66,7 +68,7 @@ public enum TendermintCoin {
         switch self {
         case .cosmos: return "cosmos"
         case .kava: return "kava"
-        case .iris: return "iris"
+        case .iris, .iris_fuxi: return "iris"
         case .terra, .terra_118: return "terra"
         case .bitsong: return "bitsong"
         }

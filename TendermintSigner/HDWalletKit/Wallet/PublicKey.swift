@@ -26,6 +26,8 @@ public struct PublicKey {
             return generateTdmAddress(prefix: "terra")
         case .iris:
             return generateTdmAddress(prefix: "iaa")
+        case .iris_fuxi:
+            return generateTdmAddress(prefix: "faa")
         case .kava:
             return generateTdmAddress(prefix: "kava")
         case .bitsong:
@@ -41,6 +43,8 @@ public struct PublicKey {
             return generateTdmPublicAddress(prefix: "terra")
         case .iris:
             return generateTdmPublicAddress(prefix: "iaa")
+        case .iris_fuxi:
+            return generateTdmPublicAddress(prefix: "faa")
         case .kava:
             return generateTdmPublicAddress(prefix: "kava")
         case .bitsong:
@@ -56,6 +60,8 @@ public struct PublicKey {
             return generateTdmValidator(prefix: "terra")
         case .iris:
             return generateTdmValidator(prefix: "", customPrefix: "iva")
+        case .iris_fuxi:
+            return generateTdmValidator(prefix: "", customPrefix: "fva")
         case .kava:
             return generateTdmValidator(prefix: "kava")
         case .bitsong:
@@ -71,6 +77,8 @@ public struct PublicKey {
             return generateTdmPublicValidator(prefix: "terra")
         case .iris:
             return generateTdmPublicValidator(prefix: "iaa")
+        case .iris_fuxi:
+            return generateTdmPublicValidator(prefix: "faa")
         case .kava:
             return generateTdmPublicValidator(prefix: "kava")
         case .bitsong:
