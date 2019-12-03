@@ -31,9 +31,11 @@ public class TendermintClient {
     
     public func signHash(transferData: Data, hdAccount: Account) -> String {
         var hash = ""
-
+        var data = Data()
+        
         do {
-            try hash = hdAccount.privateKey.sign(hash: transferData).base64EncodedString()
+            try data = hdAccount.privateKey.sign(hash: transferData)
+            hash = data.base64EncodedString()
         } catch {
             print("failed")
         }
@@ -42,4 +44,22 @@ public class TendermintClient {
         
         return hash
     }
+    
+    public func signHashTest(transferData: Data, hdAccount: Account) -> String {
+        var hash = ""
+        var data = Data()
+        
+        do {
+            try data = hdAccount.privateKey.sign(hash: transferData)
+            print(data.bytes)
+            hash = data.base64EncodedString()
+        } catch {
+            print("failed")
+        }
+        hash = String(hash.dropLast().dropLast())
+        hash += "=="
+        
+        return hash
+    }
+
 }
