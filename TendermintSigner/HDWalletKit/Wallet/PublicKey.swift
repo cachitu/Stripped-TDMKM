@@ -34,6 +34,8 @@ public struct PublicKey {
             return generateTdmAddress(prefix: "bitsong")
         case .emoney:
             return generateTdmAddress(prefix: "emoney")
+        case .regen:
+            return generateTdmAddress(prefix: "xrn:")
         }
     }
     
@@ -53,6 +55,8 @@ public struct PublicKey {
             return generateTdmPublicAddress(prefix: "bitsong")
         case .emoney:
             return generateTdmPublicAddress(prefix: "emoney")
+        case .regen:
+            return generateTdmPublicAddress(prefix: "xrn:")
         }
     }
     
@@ -72,6 +76,8 @@ public struct PublicKey {
             return generateTdmValidator(prefix: "bitsong")
         case .emoney:
             return generateTdmValidator(prefix: "emoney")
+        case .regen:
+            return generateTdmValidator(prefix: "xrn:")
         }
     }
     
@@ -91,6 +97,8 @@ public struct PublicKey {
             return generateTdmPublicValidator(prefix: "bitsong")
         case .emoney:
             return generateTdmPublicValidator(prefix: "emoney")
+        case .regen:
+        return generateTdmPublicValidator(prefix: "xrn:")
         }
     }
 
