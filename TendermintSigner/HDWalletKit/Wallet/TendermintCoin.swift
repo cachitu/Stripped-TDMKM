@@ -41,23 +41,32 @@ public enum TendermintCoin {
         return 0x80
     }
     
-//    public var addressPrefix: String {
-//        switch self {
-//        case .cosmos:
-//            return "cosmos"
-//        case .terra, .terra_118:
-//            return "terra"
-//        case .iris:
-//            return "iaa"
-//        case .iris_fuxi:
-//            return "ifa"
-//        case .bitsong:
-//            return "bitsong"
-//        case .kava:
-//            return "kava"
-//        }
-//    }
+    public var addressPrefix: String {
+        switch self {
+        case .cosmos: return "cosmos"
+        case .terra, .terra_118: return "terra"
+        case .iris: return "iaa"
+        case .iris_fuxi: return "faa"
+        case .kava: return "kava"
+        case .bitsong: return "bitsong"
+        case .emoney: return "emoney"
+        case .regen: return "xrn:"
+        }
+    }
     
+    public var validatorPrefix: String {
+        switch self {
+        case .cosmos: return "cosmos"
+        case .terra, .terra_118: return "terra"
+        case .iris: return "iva"
+        case .iris_fuxi: return "fva"
+        case .kava: return "kava"
+        case .bitsong: return "bitsong"
+        case .emoney: return "emoney"
+        case .regen: return "xrn:"
+        }
+    }
+
     public var coinType: UInt32 {
         switch self {
         case .cosmos, .iris, .iris_fuxi,.kava, .bitsong, .terra_118, .emoney, .regen:

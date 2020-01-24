@@ -19,89 +19,25 @@ public struct PublicKey {
     
     // NOTE: https://github.com/bitcoin/bips/blob/master/bip-0013.mediawiki
     public var address: String {
-        switch coin {
-        case .cosmos:
-            return generateTdmAddress(prefix: "cosmos")
-        case .terra, .terra_118:
-            return generateTdmAddress(prefix: "terra")
-        case .iris:
-            return generateTdmAddress(prefix: "iaa")
-        case .iris_fuxi:
-            return generateTdmAddress(prefix: "faa")
-        case .kava:
-            return generateTdmAddress(prefix: "kava")
-        case .bitsong:
-            return generateTdmAddress(prefix: "bitsong")
-        case .emoney:
-            return generateTdmAddress(prefix: "emoney")
-        case .regen:
-            return generateTdmAddress(prefix: "xrn:")
-        }
+        return generateTdmAddress(prefix: coin.addressPrefix)
     }
     
     public var publicAddress: String {
-        switch coin {
-        case .cosmos:
-            return generateTdmPublicAddress(prefix: "cosmos")
-        case .terra, .terra_118:
-            return generateTdmPublicAddress(prefix: "terra")
-        case .iris:
-            return generateTdmPublicAddress(prefix: "iaa")
-        case .iris_fuxi:
-            return generateTdmPublicAddress(prefix: "faa")
-        case .kava:
-            return generateTdmPublicAddress(prefix: "kava")
-        case .bitsong:
-            return generateTdmPublicAddress(prefix: "bitsong")
-        case .emoney:
-            return generateTdmPublicAddress(prefix: "emoney")
-        case .regen:
-            return generateTdmPublicAddress(prefix: "xrn:")
-        }
+        return generateTdmPublicAddress(prefix: coin.addressPrefix)
     }
     
     public var validator: String {
         switch coin {
-        case .cosmos:
-            return generateTdmValidator(prefix: "cosmos")
-        case .terra, .terra_118:
-            return generateTdmValidator(prefix: "terra")
-        case .iris:
-            return generateTdmValidator(prefix: "", customPrefix: "iva")
-        case .iris_fuxi:
-            return generateTdmValidator(prefix: "", customPrefix: "fva")
-        case .kava:
-            return generateTdmValidator(prefix: "kava")
-        case .bitsong:
-            return generateTdmValidator(prefix: "bitsong")
-        case .emoney:
-            return generateTdmValidator(prefix: "emoney")
-        case .regen:
-            return generateTdmValidator(prefix: "xrn:")
+        case .iris: return generateTdmValidator(prefix: "", customPrefix: coin.validatorPrefix)
+        case .iris_fuxi: return generateTdmValidator(prefix: "", customPrefix: coin.validatorPrefix)
+        default: return generateTdmValidator(prefix: coin.addressPrefix)
         }
     }
     
     public var publicValidator: String {
-        switch coin {
-        case .cosmos:
-            return generateTdmPublicValidator(prefix: "cosmos")
-        case .terra, .terra_118:
-            return generateTdmPublicValidator(prefix: "terra")
-        case .iris:
-            return generateTdmPublicValidator(prefix: "iaa")
-        case .iris_fuxi:
-            return generateTdmPublicValidator(prefix: "faa")
-        case .kava:
-            return generateTdmPublicValidator(prefix: "kava")
-        case .bitsong:
-            return generateTdmPublicValidator(prefix: "bitsong")
-        case .emoney:
-            return generateTdmPublicValidator(prefix: "emoney")
-        case .regen:
-        return generateTdmPublicValidator(prefix: "xrn:")
-        }
+        return generateTdmPublicValidator(prefix: coin.addressPrefix)
     }
-
+    
     func generateTdmAddress(prefix: String) -> String {
         
         let publicKey = getPublicKey(compressed: true)
