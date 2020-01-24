@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct PublicKey {
+public struct TendermintPublicKey {
     public let rawPrivateKey: Data
     public let coin: TendermintCoin
     

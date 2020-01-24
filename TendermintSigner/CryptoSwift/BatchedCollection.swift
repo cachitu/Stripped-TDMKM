@@ -27,10 +27,6 @@ extension BatchedCollectionIndex: Comparable {
     }
 }
 
-protocol BatchedCollectionType: Collection {
-    associatedtype Base: Collection
-}
-
 struct BatchedCollection<Base: Collection>: Collection {
     let base: Base
     let size: Int

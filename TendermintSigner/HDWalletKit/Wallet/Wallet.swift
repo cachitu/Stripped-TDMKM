@@ -9,24 +9,24 @@ import Foundation
 
 public final class Wallet {
     
-    public let privateKey: PrivateKey
+    public let privateKey: TendermintPrivateKey
     public let coin: TendermintCoin
     
     public init(seed: Data, coin: TendermintCoin) {
         self.coin = coin
-        privateKey = PrivateKey(seed: seed, coin: coin)
+        privateKey = TendermintPrivateKey(seed: seed, coin: coin)
     }
     
     //MARK: - Public
-    public func generateAddress(at index: UInt32)  -> String {
-        let derivedKey = bip44PrivateKey.derived(at: .notHardened(index))
-        return derivedKey.publicKey.address
-    }
+//    public func generateAddress(at index: UInt32)  -> String {
+//        let derivedKey = bip44PrivateKey.derived(at: .notHardened(index))
+//        return derivedKey.publicKey.address
+//    }
     
-    public func generateAccount(at derivationPath: [DerivationNode]) -> Account {
-        let privateKey = generatePrivateKey(at: derivationPath)
-        return Account(privateKey: privateKey)
-    }
+//    public func generateAccount(at derivationPath: [DerivationNode]) -> Account {
+//        let privateKey = generatePrivateKey(at: derivationPath)
+//        return Account(privateKey: privateKey)
+//    }
     
     public func generateAccount(at index: UInt32 = 0) -> Account {
         let address = bip44PrivateKey.derived(at: .notHardened(index))
@@ -43,7 +43,7 @@ public final class Wallet {
     
     //MARK: - Private
     //https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki
-    private var bip44PrivateKey: PrivateKey {
+    private var bip44PrivateKey: TendermintPrivateKey {
         let bip44Purpose: UInt32 = 44
         let purpose = privateKey.derived(at: .hardened(bip44Purpose))
         let coinType = purpose.derived(at: .hardened(coin.coinType))
@@ -52,12 +52,12 @@ public final class Wallet {
         return receive
     }
     
-    private func generatePrivateKey(at nodes:[DerivationNode]) -> PrivateKey {
+    private func generatePrivateKey(at nodes:[DerivationNode]) -> TendermintPrivateKey {
         return privateKey(at: nodes)
     }
     
-    private func privateKey(at nodes: [DerivationNode]) -> PrivateKey {
-        var key: PrivateKey = privateKey
+    private func privateKey(at nodes: [DerivationNode]) -> TendermintPrivateKey {
+        var key: TendermintPrivateKey = privateKey
         for node in nodes {
             key = key.derived(at:node)
         }

@@ -9,11 +9,11 @@ import Foundation
 
 public struct Account {
     
-    public init(privateKey: PrivateKey) {
+    public init(privateKey: TendermintPrivateKey) {
         self.privateKey = privateKey
     }
     
-    public let privateKey: PrivateKey
+    public let privateKey: TendermintPrivateKey
     
     public var rawPrivateKey: String {
         return privateKey.get()

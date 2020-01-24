@@ -14,12 +14,13 @@ enum PrivateKeyType {
     case nonHd
 }
 
-public struct PrivateKey {
+public struct TendermintPrivateKey {
     
     public let raw: Data
     public let chainCode: Data
     public let index: UInt32
     public let coin: TendermintCoin
+    
     private var keyType: PrivateKeyType
     
     public init(seed: Data, coin: TendermintCoin) {
@@ -43,8 +44,8 @@ public struct PrivateKey {
         self.keyType = .hd
     }
     
-    public var publicKey: PublicKey {
-        return PublicKey(privateKey: raw, coin: coin)
+    public var publicKey: TendermintPublicKey {
+        return TendermintPublicKey(privateKey: raw, coin: coin)
     }
     
     private func wif() -> String {
@@ -63,7 +64,7 @@ public struct PrivateKey {
        }
     }
     
-    public func derived(at node: DerivationNode) -> PrivateKey {
+    public func derived(at node: DerivationNode) -> TendermintPrivateKey {
         guard keyType == .hd else { fatalError() }
         let edge: UInt32 = 0x80000000
         guard (edge & node.index) == 0 else { fatalError("Invalid child index") }
@@ -90,7 +91,7 @@ public struct PrivateKey {
         let curveOrder = BInt(hex: "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141")!
         let derivedPrivateKey = ((BInt(data: raw) + factor) % curveOrder).data
         let derivedChainCode = digest[32..<64]
-        return PrivateKey(
+        return TendermintPrivateKey(
             privateKey: derivedPrivateKey,
             chainCode: derivedChainCode,
             index: derivingIndex,

@@ -13,38 +13,28 @@
 		EEBDF8F1237DB67A00079F38 /* ECDSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7B2237DB67900079F38 /* ECDSA.swift */; };
 		EEBDF8F2237DB67A00079F38 /* SecpResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7B3237DB67900079F38 /* SecpResult.swift */; };
 		EEBDF8F3237DB67A00079F38 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7B4237DB67900079F38 /* Crypto.swift */; };
-		EEBDF8F4237DB67A00079F38 /* EIP155Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7B5237DB67900079F38 /* EIP155Signer.swift */; };
 		EEBDF8F5237DB67A00079F38 /* EllipticCurveEncrypterSecp256k1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7B6237DB67900079F38 /* EllipticCurveEncrypterSecp256k1.swift */; };
 		EEBDF8F6237DB67A00079F38 /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7B8237DB67900079F38 /* RIPEMD160.swift */; };
 		EEBDF8F7237DB67A00079F38 /* BigNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7BA237DB67900079F38 /* BigNumber.swift */; };
 		EEBDF8F8237DB67A00079F38 /* BigInt+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7BB237DB67900079F38 /* BigInt+Extension.swift */; };
 		EEBDF8F9237DB67A00079F38 /* SMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7BC237DB67900079F38 /* SMP.swift */; };
-		EEBDF8FA237DB67A00079F38 /* WeiEthterConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7BE237DB67900079F38 /* WeiEthterConverter.swift */; };
 		EEBDF8FB237DB67A00079F38 /* VarInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7BF237DB67900079F38 /* VarInt.swift */; };
 		EEBDF8FC237DB67A00079F38 /* DerivationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7C0237DB67900079F38 /* DerivationNode.swift */; };
 		EEBDF8FD237DB67A00079F38 /* Typealiaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7C1237DB67900079F38 /* Typealiaces.swift */; };
-		EEBDF8FE237DB67A00079F38 /* ByteStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7C2237DB67900079F38 /* ByteStream.swift */; };
 		EEBDF8FF237DB67A00079F38 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7C4237DB67900079F38 /* String+Hex.swift */; };
 		EEBDF900237DB67A00079F38 /* Data+Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7C5237DB67900079F38 /* Data+Script.swift */; };
 		EEBDF901237DB67A00079F38 /* Data+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7C6237DB67900079F38 /* Data+Random.swift */; };
 		EEBDF902237DB67A00079F38 /* VarString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7C7237DB67900079F38 /* VarString.swift */; };
 		EEBDF903237DB67A00079F38 /* DataConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7C8237DB67900079F38 /* DataConvertable.swift */; };
 		EEBDF904237DB67A00079F38 /* Base58Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7CA237DB67900079F38 /* Base58Encode.swift */; };
-		EEBDF905237DB67A00079F38 /* RLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7CB237DB67900079F38 /* RLP.swift */; };
-		EEBDF906237DB67A00079F38 /* EIP55.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7CC237DB67900079F38 /* EIP55.swift */; };
 		EEBDF907237DB67A00079F38 /* Bech32.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7CD237DB67900079F38 /* Bech32.swift */; };
 		EEBDF908237DB67A00079F38 /* HDWalletKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7CF237DB67900079F38 /* HDWalletKitError.swift */; };
 		EEBDF909237DB67A00079F38 /* KeystoreV3Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7D1237DB67900079F38 /* KeystoreV3Json.swift */; };
-		EEBDF90A237DB67A00079F38 /* KeystoreV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7D2237DB67900079F38 /* KeystoreV3.swift */; };
-		EEBDF90B237DB67A00079F38 /* KeystoreInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7D3237DB67900079F38 /* KeystoreInterface.swift */; };
 		EEBDF90C237DB67A00079F38 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7D5237DB67900079F38 /* Account.swift */; };
 		EEBDF90D237DB67A00079F38 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7D7237DB67900079F38 /* WordList.swift */; };
 		EEBDF90E237DB67A00079F38 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7D8237DB67900079F38 /* Mnemonic.swift */; };
-		EEBDF90F237DB67A00079F38 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7DA237DB67900079F38 /* PublicKey.swift */; };
-		EEBDF910237DB67A00079F38 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7DB237DB67900079F38 /* PrivateKey.swift */; };
-		EEBDF911237DB67A00079F38 /* ERC20.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7DE237DB67900079F38 /* ERC20.swift */; };
-		EEBDF912237DB67A00079F38 /* EthereumAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7E1237DB67900079F38 /* EthereumAddress.swift */; };
-		EEBDF913237DB67A00079F38 /* EthereumRawTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7E2237DB67900079F38 /* EthereumRawTransaction.swift */; };
+		EEBDF90F237DB67A00079F38 /* TendermintPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7DA237DB67900079F38 /* TendermintPublicKey.swift */; };
+		EEBDF910237DB67A00079F38 /* TendermintPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7DB237DB67900079F38 /* TendermintPrivateKey.swift */; };
 		EEBDF914237DB67A00079F38 /* TendermintCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7E3237DB67900079F38 /* TendermintCoin.swift */; };
 		EEBDF915237DB67A00079F38 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7E4237DB67900079F38 /* Wallet.swift */; };
 		EEBDF929237DB67A00079F38 /* TendermintClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF7FF237DB67900079F38 /* TendermintClient.swift */; };
@@ -53,23 +43,18 @@
 		EEBDF92C237DB67A00079F38 /* BlockEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF803237DB67A00079F38 /* BlockEncryptor.swift */; };
 		EEBDF92D237DB67A00079F38 /* UInt64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF804237DB67A00079F38 /* UInt64+Extension.swift */; };
 		EEBDF92E237DB67A00079F38 /* Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF805237DB67A00079F38 /* Cryptors.swift */; };
-		EEBDF92F237DB67A00079F38 /* HKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF806237DB67A00079F38 /* HKDF.swift */; };
 		EEBDF930237DB67A00079F38 /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF807237DB67A00079F38 /* Cipher.swift */; };
-		EEBDF931237DB67A00079F38 /* AEADChaCha20Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF809237DB67A00079F38 /* AEADChaCha20Poly1305.swift */; };
-		EEBDF932237DB67A00079F38 /* AEAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF80A237DB67A00079F38 /* AEAD.swift */; };
 		EEBDF933237DB67A00079F38 /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF80B237DB67A00079F38 /* CBCMAC.swift */; };
 		EEBDF934237DB67A00079F38 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF80C237DB67A00079F38 /* Int+Extension.swift */; };
 		EEBDF935237DB67A00079F38 /* AES.Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF80D237DB67A00079F38 /* AES.Cryptors.swift */; };
 		EEBDF936237DB67A00079F38 /* Bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF80E237DB67A00079F38 /* Bit.swift */; };
 		EEBDF937237DB67A00079F38 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF80F237DB67A00079F38 /* HMAC.swift */; };
-		EEBDF938237DB67A00079F38 /* CMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF810237DB67A00079F38 /* CMAC.swift */; };
 		EEBDF939237DB67A00079F38 /* UInt16+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF811237DB67A00079F38 /* UInt16+Extension.swift */; };
 		EEBDF93A237DB67A00079F38 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF812237DB67A00079F38 /* Collection+Extension.swift */; };
 		EEBDF93B237DB67A00079F38 /* UInt32+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF813237DB67A00079F38 /* UInt32+Extension.swift */; };
 		EEBDF93C237DB67A00079F38 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF814237DB67A00079F38 /* Digest.swift */; };
 		EEBDF93D237DB67A00079F38 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF815237DB67A00079F38 /* UInt128.swift */; };
 		EEBDF93E237DB67A00079F38 /* Scrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF816237DB67A00079F38 /* Scrypt.swift */; };
-		EEBDF93F237DB67A00079F38 /* NoPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF817237DB67A00079F38 /* NoPadding.swift */; };
 		EEBDF940237DB67A00079F38 /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF819237DB67A00079F38 /* String+FoundationExtension.swift */; };
 		EEBDF941237DB67A00079F38 /* Blowfish+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF81A237DB67A00079F38 /* Blowfish+Foundation.swift */; };
 		EEBDF942237DB67A00079F38 /* Utils+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF81B237DB67A00079F38 /* Utils+Foundation.swift */; };
@@ -82,7 +67,6 @@
 		EEBDF949237DB67A00079F38 /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF822237DB67A00079F38 /* UInt8+Extension.swift */; };
 		EEBDF94A237DB67A00079F38 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF823237DB67A00079F38 /* MD5.swift */; };
 		EEBDF94B237DB67A00079F38 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF824237DB67A00079F38 /* Cryptor.swift */; };
-		EEBDF94C237DB67A00079F38 /* CompactMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF825237DB67A00079F38 /* CompactMap.swift */; };
 		EEBDF94D237DB67A00079F38 /* BatchedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF826237DB67A00079F38 /* BatchedCollection.swift */; };
 		EEBDF94E237DB67A00079F38 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF827237DB67A00079F38 /* SecureBytes.swift */; };
 		EEBDF94F237DB67A00079F38 /* ZeroPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF828237DB67A00079F38 /* ZeroPadding.swift */; };
@@ -93,7 +77,6 @@
 		EEBDF954237DB67A00079F38 /* RandomBytesSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF82D237DB67A00079F38 /* RandomBytesSequence.swift */; };
 		EEBDF955237DB67A00079F38 /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF82E237DB67A00079F38 /* Rabbit.swift */; };
 		EEBDF956237DB67A00079F38 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF82F237DB67A00079F38 /* SHA1.swift */; };
-		EEBDF957237DB67A00079F38 /* Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF830237DB67A00079F38 /* Poly1305.swift */; };
 		EEBDF958237DB67A00079F38 /* BlockCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF831237DB67A00079F38 /* BlockCipher.swift */; };
 		EEBDF959237DB67A00079F38 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF832237DB67A00079F38 /* Updatable.swift */; };
 		EEBDF95A237DB67A00079F38 /* Blowfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF833237DB67A00079F38 /* Blowfish.swift */; };
@@ -109,18 +92,12 @@
 		EEBDF964237DB67A00079F38 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF83E237DB67A00079F38 /* PKCS5.swift */; };
 		EEBDF965237DB67A00079F38 /* PKCS7.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF83F237DB67A00079F38 /* PKCS7.swift */; };
 		EEBDF966237DB67A00079F38 /* PBKDF2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF840237DB67A00079F38 /* PBKDF2.swift */; };
-		EEBDF967237DB67A00079F38 /* PBKDF1.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF841237DB67A00079F38 /* PBKDF1.swift */; };
 		EEBDF968237DB67A00079F38 /* BlockModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF843237DB67A00079F38 /* BlockModeOptions.swift */; };
-		EEBDF969237DB67A00079F38 /* CFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF844237DB67A00079F38 /* CFB.swift */; };
 		EEBDF96A237DB67A00079F38 /* CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF845237DB67A00079F38 /* CBC.swift */; };
-		EEBDF96B237DB67A00079F38 /* ECB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF846237DB67A00079F38 /* ECB.swift */; };
 		EEBDF96C237DB67A00079F38 /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF847237DB67A00079F38 /* CCM.swift */; };
-		EEBDF96D237DB67A00079F38 /* PCBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF848237DB67A00079F38 /* PCBC.swift */; };
 		EEBDF96E237DB67A00079F38 /* BlockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF849237DB67A00079F38 /* BlockMode.swift */; };
 		EEBDF96F237DB67A00079F38 /* GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF84A237DB67A00079F38 /* GCM.swift */; };
 		EEBDF970237DB67A00079F38 /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF84B237DB67A00079F38 /* CipherModeWorker.swift */; };
-		EEBDF971237DB67A00079F38 /* CTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF84C237DB67A00079F38 /* CTR.swift */; };
-		EEBDF972237DB67A00079F38 /* OFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF84D237DB67A00079F38 /* OFB.swift */; };
 		EEBDF973237DB67A00079F38 /* ChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF84E237DB67A00079F38 /* ChaCha20.swift */; };
 		EEBDF974237DB67A00079F38 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF84F237DB67A00079F38 /* Array+Extension.swift */; };
 		EEBDF975237DB67A00079F38 /* secp256k1-config.h in Headers */ = {isa = PBXBuildFile; fileRef = EEBDF852237DB67A00079F38 /* secp256k1-config.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -197,38 +174,28 @@
 		EEBDF7B2237DB67900079F38 /* ECDSA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECDSA.swift; sourceTree = "<group>"; };
 		EEBDF7B3237DB67900079F38 /* SecpResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecpResult.swift; sourceTree = "<group>"; };
 		EEBDF7B4237DB67900079F38 /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
-		EEBDF7B5237DB67900079F38 /* EIP155Signer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EIP155Signer.swift; sourceTree = "<group>"; };
 		EEBDF7B6237DB67900079F38 /* EllipticCurveEncrypterSecp256k1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticCurveEncrypterSecp256k1.swift; sourceTree = "<group>"; };
 		EEBDF7B8237DB67900079F38 /* RIPEMD160.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RIPEMD160.swift; sourceTree = "<group>"; };
 		EEBDF7BA237DB67900079F38 /* BigNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigNumber.swift; sourceTree = "<group>"; };
 		EEBDF7BB237DB67900079F38 /* BigInt+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BigInt+Extension.swift"; sourceTree = "<group>"; };
 		EEBDF7BC237DB67900079F38 /* SMP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMP.swift; sourceTree = "<group>"; };
-		EEBDF7BE237DB67900079F38 /* WeiEthterConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiEthterConverter.swift; sourceTree = "<group>"; };
 		EEBDF7BF237DB67900079F38 /* VarInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VarInt.swift; sourceTree = "<group>"; };
 		EEBDF7C0237DB67900079F38 /* DerivationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DerivationNode.swift; sourceTree = "<group>"; };
 		EEBDF7C1237DB67900079F38 /* Typealiaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiaces.swift; sourceTree = "<group>"; };
-		EEBDF7C2237DB67900079F38 /* ByteStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteStream.swift; sourceTree = "<group>"; };
 		EEBDF7C4237DB67900079F38 /* String+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Hex.swift"; sourceTree = "<group>"; };
 		EEBDF7C5237DB67900079F38 /* Data+Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Script.swift"; sourceTree = "<group>"; };
 		EEBDF7C6237DB67900079F38 /* Data+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Random.swift"; sourceTree = "<group>"; };
 		EEBDF7C7237DB67900079F38 /* VarString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VarString.swift; sourceTree = "<group>"; };
 		EEBDF7C8237DB67900079F38 /* DataConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConvertable.swift; sourceTree = "<group>"; };
 		EEBDF7CA237DB67900079F38 /* Base58Encode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base58Encode.swift; sourceTree = "<group>"; };
-		EEBDF7CB237DB67900079F38 /* RLP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLP.swift; sourceTree = "<group>"; };
-		EEBDF7CC237DB67900079F38 /* EIP55.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EIP55.swift; sourceTree = "<group>"; };
 		EEBDF7CD237DB67900079F38 /* Bech32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bech32.swift; sourceTree = "<group>"; };
 		EEBDF7CF237DB67900079F38 /* HDWalletKitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDWalletKitError.swift; sourceTree = "<group>"; };
 		EEBDF7D1237DB67900079F38 /* KeystoreV3Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystoreV3Json.swift; sourceTree = "<group>"; };
-		EEBDF7D2237DB67900079F38 /* KeystoreV3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystoreV3.swift; sourceTree = "<group>"; };
-		EEBDF7D3237DB67900079F38 /* KeystoreInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeystoreInterface.swift; sourceTree = "<group>"; };
 		EEBDF7D5237DB67900079F38 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		EEBDF7D7237DB67900079F38 /* WordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 		EEBDF7D8237DB67900079F38 /* Mnemonic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
-		EEBDF7DA237DB67900079F38 /* PublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
-		EEBDF7DB237DB67900079F38 /* PrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateKey.swift; sourceTree = "<group>"; };
-		EEBDF7DE237DB67900079F38 /* ERC20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERC20.swift; sourceTree = "<group>"; };
-		EEBDF7E1237DB67900079F38 /* EthereumAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumAddress.swift; sourceTree = "<group>"; };
-		EEBDF7E2237DB67900079F38 /* EthereumRawTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumRawTransaction.swift; sourceTree = "<group>"; };
+		EEBDF7DA237DB67900079F38 /* TendermintPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TendermintPublicKey.swift; sourceTree = "<group>"; };
+		EEBDF7DB237DB67900079F38 /* TendermintPrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TendermintPrivateKey.swift; sourceTree = "<group>"; };
 		EEBDF7E3237DB67900079F38 /* TendermintCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TendermintCoin.swift; sourceTree = "<group>"; };
 		EEBDF7E4237DB67900079F38 /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		EEBDF7FF237DB67900079F38 /* TendermintClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TendermintClient.swift; sourceTree = "<group>"; };
@@ -237,23 +204,18 @@
 		EEBDF803237DB67A00079F38 /* BlockEncryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockEncryptor.swift; sourceTree = "<group>"; };
 		EEBDF804237DB67A00079F38 /* UInt64+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt64+Extension.swift"; sourceTree = "<group>"; };
 		EEBDF805237DB67A00079F38 /* Cryptors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptors.swift; sourceTree = "<group>"; };
-		EEBDF806237DB67A00079F38 /* HKDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKDF.swift; sourceTree = "<group>"; };
 		EEBDF807237DB67A00079F38 /* Cipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cipher.swift; sourceTree = "<group>"; };
-		EEBDF809237DB67A00079F38 /* AEADChaCha20Poly1305.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEADChaCha20Poly1305.swift; sourceTree = "<group>"; };
-		EEBDF80A237DB67A00079F38 /* AEAD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAD.swift; sourceTree = "<group>"; };
 		EEBDF80B237DB67A00079F38 /* CBCMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBCMAC.swift; sourceTree = "<group>"; };
 		EEBDF80C237DB67A00079F38 /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		EEBDF80D237DB67A00079F38 /* AES.Cryptors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES.Cryptors.swift; sourceTree = "<group>"; };
 		EEBDF80E237DB67A00079F38 /* Bit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bit.swift; sourceTree = "<group>"; };
 		EEBDF80F237DB67A00079F38 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
-		EEBDF810237DB67A00079F38 /* CMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMAC.swift; sourceTree = "<group>"; };
 		EEBDF811237DB67A00079F38 /* UInt16+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt16+Extension.swift"; sourceTree = "<group>"; };
 		EEBDF812237DB67A00079F38 /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		EEBDF813237DB67A00079F38 /* UInt32+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt32+Extension.swift"; sourceTree = "<group>"; };
 		EEBDF814237DB67A00079F38 /* Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Digest.swift; sourceTree = "<group>"; };
 		EEBDF815237DB67A00079F38 /* UInt128.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UInt128.swift; sourceTree = "<group>"; };
 		EEBDF816237DB67A00079F38 /* Scrypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrypt.swift; sourceTree = "<group>"; };
-		EEBDF817237DB67A00079F38 /* NoPadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoPadding.swift; sourceTree = "<group>"; };
 		EEBDF819237DB67A00079F38 /* String+FoundationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+FoundationExtension.swift"; sourceTree = "<group>"; };
 		EEBDF81A237DB67A00079F38 /* Blowfish+Foundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Blowfish+Foundation.swift"; sourceTree = "<group>"; };
 		EEBDF81B237DB67A00079F38 /* Utils+Foundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Utils+Foundation.swift"; sourceTree = "<group>"; };
@@ -266,7 +228,6 @@
 		EEBDF822237DB67A00079F38 /* UInt8+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UInt8+Extension.swift"; sourceTree = "<group>"; };
 		EEBDF823237DB67A00079F38 /* MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
 		EEBDF824237DB67A00079F38 /* Cryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptor.swift; sourceTree = "<group>"; };
-		EEBDF825237DB67A00079F38 /* CompactMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactMap.swift; sourceTree = "<group>"; };
 		EEBDF826237DB67A00079F38 /* BatchedCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchedCollection.swift; sourceTree = "<group>"; };
 		EEBDF827237DB67A00079F38 /* SecureBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureBytes.swift; sourceTree = "<group>"; };
 		EEBDF828237DB67A00079F38 /* ZeroPadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeroPadding.swift; sourceTree = "<group>"; };
@@ -277,7 +238,6 @@
 		EEBDF82D237DB67A00079F38 /* RandomBytesSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBytesSequence.swift; sourceTree = "<group>"; };
 		EEBDF82E237DB67A00079F38 /* Rabbit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rabbit.swift; sourceTree = "<group>"; };
 		EEBDF82F237DB67A00079F38 /* SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
-		EEBDF830237DB67A00079F38 /* Poly1305.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poly1305.swift; sourceTree = "<group>"; };
 		EEBDF831237DB67A00079F38 /* BlockCipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockCipher.swift; sourceTree = "<group>"; };
 		EEBDF832237DB67A00079F38 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		EEBDF833237DB67A00079F38 /* Blowfish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blowfish.swift; sourceTree = "<group>"; };
@@ -293,18 +253,12 @@
 		EEBDF83E237DB67A00079F38 /* PKCS5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCS5.swift; sourceTree = "<group>"; };
 		EEBDF83F237DB67A00079F38 /* PKCS7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCS7.swift; sourceTree = "<group>"; };
 		EEBDF840237DB67A00079F38 /* PBKDF2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBKDF2.swift; sourceTree = "<group>"; };
-		EEBDF841237DB67A00079F38 /* PBKDF1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBKDF1.swift; sourceTree = "<group>"; };
 		EEBDF843237DB67A00079F38 /* BlockModeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockModeOptions.swift; sourceTree = "<group>"; };
-		EEBDF844237DB67A00079F38 /* CFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFB.swift; sourceTree = "<group>"; };
 		EEBDF845237DB67A00079F38 /* CBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBC.swift; sourceTree = "<group>"; };
-		EEBDF846237DB67A00079F38 /* ECB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECB.swift; sourceTree = "<group>"; };
 		EEBDF847237DB67A00079F38 /* CCM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCM.swift; sourceTree = "<group>"; };
-		EEBDF848237DB67A00079F38 /* PCBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCBC.swift; sourceTree = "<group>"; };
 		EEBDF849237DB67A00079F38 /* BlockMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockMode.swift; sourceTree = "<group>"; };
 		EEBDF84A237DB67A00079F38 /* GCM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCM.swift; sourceTree = "<group>"; };
 		EEBDF84B237DB67A00079F38 /* CipherModeWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CipherModeWorker.swift; sourceTree = "<group>"; };
-		EEBDF84C237DB67A00079F38 /* CTR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTR.swift; sourceTree = "<group>"; };
-		EEBDF84D237DB67A00079F38 /* OFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFB.swift; sourceTree = "<group>"; };
 		EEBDF84E237DB67A00079F38 /* ChaCha20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaCha20.swift; sourceTree = "<group>"; };
 		EEBDF84F237DB67A00079F38 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		EEBDF852237DB67A00079F38 /* secp256k1-config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "secp256k1-config.h"; sourceTree = "<group>"; };
@@ -443,7 +397,6 @@
 				EEBDF7BF237DB67900079F38 /* VarInt.swift */,
 				EEBDF7C0237DB67900079F38 /* DerivationNode.swift */,
 				EEBDF7C1237DB67900079F38 /* Typealiaces.swift */,
-				EEBDF7C2237DB67900079F38 /* ByteStream.swift */,
 				EEBDF7C3237DB67900079F38 /* Extensions */,
 				EEBDF7C7237DB67900079F38 /* VarString.swift */,
 				EEBDF7C8237DB67900079F38 /* DataConvertable.swift */,
@@ -468,7 +421,6 @@
 				EEBDF7B2237DB67900079F38 /* ECDSA.swift */,
 				EEBDF7B3237DB67900079F38 /* SecpResult.swift */,
 				EEBDF7B4237DB67900079F38 /* Crypto.swift */,
-				EEBDF7B5237DB67900079F38 /* EIP155Signer.swift */,
 				EEBDF7B6237DB67900079F38 /* EllipticCurveEncrypterSecp256k1.swift */,
 			);
 			path = Encryption;
@@ -495,7 +447,6 @@
 		EEBDF7BD237DB67900079F38 /* Converter */ = {
 			isa = PBXGroup;
 			children = (
-				EEBDF7BE237DB67900079F38 /* WeiEthterConverter.swift */,
 			);
 			path = Converter;
 			sourceTree = "<group>";
@@ -514,8 +465,6 @@
 			isa = PBXGroup;
 			children = (
 				EEBDF7CA237DB67900079F38 /* Base58Encode.swift */,
-				EEBDF7CB237DB67900079F38 /* RLP.swift */,
-				EEBDF7CC237DB67900079F38 /* EIP55.swift */,
 				EEBDF7CD237DB67900079F38 /* Bech32.swift */,
 			);
 			path = Encodeing;
@@ -533,8 +482,6 @@
 			isa = PBXGroup;
 			children = (
 				EEBDF7D1237DB67900079F38 /* KeystoreV3Json.swift */,
-				EEBDF7D2237DB67900079F38 /* KeystoreV3.swift */,
-				EEBDF7D3237DB67900079F38 /* KeystoreInterface.swift */,
 			);
 			path = Keystore;
 			sourceTree = "<group>";
@@ -559,8 +506,8 @@
 		EEBDF7D9237DB67900079F38 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				EEBDF7DA237DB67900079F38 /* PublicKey.swift */,
-				EEBDF7DB237DB67900079F38 /* PrivateKey.swift */,
+				EEBDF7DA237DB67900079F38 /* TendermintPublicKey.swift */,
+				EEBDF7DB237DB67900079F38 /* TendermintPrivateKey.swift */,
 				EEBDF7DC237DB67900079F38 /* AccountBased */,
 				EEBDF7E3237DB67900079F38 /* TendermintCoin.swift */,
 				EEBDF7E4237DB67900079F38 /* Wallet.swift */,
@@ -580,7 +527,6 @@
 		EEBDF7DD237DB67900079F38 /* ERC20 */ = {
 			isa = PBXGroup;
 			children = (
-				EEBDF7DE237DB67900079F38 /* ERC20.swift */,
 			);
 			path = ERC20;
 			sourceTree = "<group>";
@@ -596,8 +542,6 @@
 		EEBDF7E0237DB67900079F38 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EEBDF7E1237DB67900079F38 /* EthereumAddress.swift */,
-				EEBDF7E2237DB67900079F38 /* EthereumRawTransaction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -610,7 +554,6 @@
 				EEBDF803237DB67A00079F38 /* BlockEncryptor.swift */,
 				EEBDF804237DB67A00079F38 /* UInt64+Extension.swift */,
 				EEBDF805237DB67A00079F38 /* Cryptors.swift */,
-				EEBDF806237DB67A00079F38 /* HKDF.swift */,
 				EEBDF807237DB67A00079F38 /* Cipher.swift */,
 				EEBDF808237DB67A00079F38 /* AEAD */,
 				EEBDF80B237DB67A00079F38 /* CBCMAC.swift */,
@@ -618,19 +561,16 @@
 				EEBDF80D237DB67A00079F38 /* AES.Cryptors.swift */,
 				EEBDF80E237DB67A00079F38 /* Bit.swift */,
 				EEBDF80F237DB67A00079F38 /* HMAC.swift */,
-				EEBDF810237DB67A00079F38 /* CMAC.swift */,
 				EEBDF811237DB67A00079F38 /* UInt16+Extension.swift */,
 				EEBDF812237DB67A00079F38 /* Collection+Extension.swift */,
 				EEBDF813237DB67A00079F38 /* UInt32+Extension.swift */,
 				EEBDF814237DB67A00079F38 /* Digest.swift */,
 				EEBDF815237DB67A00079F38 /* UInt128.swift */,
 				EEBDF816237DB67A00079F38 /* Scrypt.swift */,
-				EEBDF817237DB67A00079F38 /* NoPadding.swift */,
 				EEBDF818237DB67A00079F38 /* Foundation */,
 				EEBDF822237DB67A00079F38 /* UInt8+Extension.swift */,
 				EEBDF823237DB67A00079F38 /* MD5.swift */,
 				EEBDF824237DB67A00079F38 /* Cryptor.swift */,
-				EEBDF825237DB67A00079F38 /* CompactMap.swift */,
 				EEBDF826237DB67A00079F38 /* BatchedCollection.swift */,
 				EEBDF827237DB67A00079F38 /* SecureBytes.swift */,
 				EEBDF828237DB67A00079F38 /* ZeroPadding.swift */,
@@ -641,7 +581,6 @@
 				EEBDF82D237DB67A00079F38 /* RandomBytesSequence.swift */,
 				EEBDF82E237DB67A00079F38 /* Rabbit.swift */,
 				EEBDF82F237DB67A00079F38 /* SHA1.swift */,
-				EEBDF830237DB67A00079F38 /* Poly1305.swift */,
 				EEBDF831237DB67A00079F38 /* BlockCipher.swift */,
 				EEBDF832237DB67A00079F38 /* Updatable.swift */,
 				EEBDF833237DB67A00079F38 /* Blowfish.swift */,
@@ -664,8 +603,6 @@
 		EEBDF808237DB67A00079F38 /* AEAD */ = {
 			isa = PBXGroup;
 			children = (
-				EEBDF809237DB67A00079F38 /* AEADChaCha20Poly1305.swift */,
-				EEBDF80A237DB67A00079F38 /* AEAD.swift */,
 			);
 			path = AEAD;
 			sourceTree = "<group>";
@@ -693,7 +630,6 @@
 				EEBDF83E237DB67A00079F38 /* PKCS5.swift */,
 				EEBDF83F237DB67A00079F38 /* PKCS7.swift */,
 				EEBDF840237DB67A00079F38 /* PBKDF2.swift */,
-				EEBDF841237DB67A00079F38 /* PBKDF1.swift */,
 			);
 			path = PKCS;
 			sourceTree = "<group>";
@@ -702,16 +638,11 @@
 			isa = PBXGroup;
 			children = (
 				EEBDF843237DB67A00079F38 /* BlockModeOptions.swift */,
-				EEBDF844237DB67A00079F38 /* CFB.swift */,
 				EEBDF845237DB67A00079F38 /* CBC.swift */,
-				EEBDF846237DB67A00079F38 /* ECB.swift */,
 				EEBDF847237DB67A00079F38 /* CCM.swift */,
-				EEBDF848237DB67A00079F38 /* PCBC.swift */,
 				EEBDF849237DB67A00079F38 /* BlockMode.swift */,
 				EEBDF84A237DB67A00079F38 /* GCM.swift */,
 				EEBDF84B237DB67A00079F38 /* CipherModeWorker.swift */,
-				EEBDF84C237DB67A00079F38 /* CTR.swift */,
-				EEBDF84D237DB67A00079F38 /* OFB.swift */,
 			);
 			path = BlockMode;
 			sourceTree = "<group>";
@@ -1000,43 +931,35 @@
 				EEBDF948237DB67A00079F38 /* Rabbit+Foundation.swift in Sources */,
 				EEBDF960237DB67A00079F38 /* Checksum.swift in Sources */,
 				EEBDF904237DB67A00079F38 /* Base58Encode.swift in Sources */,
-				EEBDF90F237DB67A00079F38 /* PublicKey.swift in Sources */,
+				EEBDF90F237DB67A00079F38 /* TendermintPublicKey.swift in Sources */,
 				EEBDF8F9237DB67A00079F38 /* SMP.swift in Sources */,
 				EEBDF902237DB67A00079F38 /* VarString.swift in Sources */,
 				EEBDF93A237DB67A00079F38 /* Collection+Extension.swift in Sources */,
 				EEBDF8F6237DB67A00079F38 /* RIPEMD160.swift in Sources */,
 				EEBDF961237DB67A00079F38 /* SHA2.swift in Sources */,
-				EEBDF94C237DB67A00079F38 /* CompactMap.swift in Sources */,
-				EEBDF90A237DB67A00079F38 /* KeystoreV3.swift in Sources */,
 				EEBDF93B237DB67A00079F38 /* UInt32+Extension.swift in Sources */,
 				EEBDF93D237DB67A00079F38 /* UInt128.swift in Sources */,
 				EEBDF956237DB67A00079F38 /* SHA1.swift in Sources */,
 				EEBDF929237DB67A00079F38 /* TendermintClient.swift in Sources */,
-				EEBDF96D237DB67A00079F38 /* PCBC.swift in Sources */,
 				EEBDF94A237DB67A00079F38 /* MD5.swift in Sources */,
 				EEBDF8F1237DB67A00079F38 /* ECDSA.swift in Sources */,
 				EEBDF8FB237DB67A00079F38 /* VarInt.swift in Sources */,
 				EEBDF90D237DB67A00079F38 /* WordList.swift in Sources */,
-				EEBDF957237DB67A00079F38 /* Poly1305.swift in Sources */,
 				EEBDF973237DB67A00079F38 /* ChaCha20.swift in Sources */,
 				EEBDF93E237DB67A00079F38 /* Scrypt.swift in Sources */,
 				EEBDF901237DB67A00079F38 /* Data+Random.swift in Sources */,
-				EEBDF8FA237DB67A00079F38 /* WeiEthterConverter.swift in Sources */,
 				EEBDF95C237DB67A00079F38 /* StreamEncryptor.swift in Sources */,
 				EEBDF94E237DB67A00079F38 /* SecureBytes.swift in Sources */,
-				EEBDF971237DB67A00079F38 /* CTR.swift in Sources */,
 				EEBDF94D237DB67A00079F38 /* BatchedCollection.swift in Sources */,
 				EEBDF965237DB67A00079F38 /* PKCS7.swift in Sources */,
 				EEBDF970237DB67A00079F38 /* CipherModeWorker.swift in Sources */,
 				EEBDF95D237DB67A00079F38 /* DigestType.swift in Sources */,
 				EEBDF964237DB67A00079F38 /* PKCS5.swift in Sources */,
-				EEBDF969237DB67A00079F38 /* CFB.swift in Sources */,
 				EEBDF95F237DB67A00079F38 /* Generics.swift in Sources */,
 				EEBDF951237DB67A00079F38 /* Authenticator.swift in Sources */,
 				EEBDF955237DB67A00079F38 /* Rabbit.swift in Sources */,
 				EEBDF8F2237DB67A00079F38 /* SecpResult.swift in Sources */,
 				EEBDF93C237DB67A00079F38 /* Digest.swift in Sources */,
-				EEBDF972237DB67A00079F38 /* OFB.swift in Sources */,
 				EEBDF941237DB67A00079F38 /* Blowfish+Foundation.swift in Sources */,
 				EEBDF909237DB67A00079F38 /* KeystoreV3Json.swift in Sources */,
 				EEBDF946237DB67A00079F38 /* Array+Foundation.swift in Sources */,
@@ -1044,33 +967,23 @@
 				EEBDF940237DB67A00079F38 /* String+FoundationExtension.swift in Sources */,
 				EEBDF96C237DB67A00079F38 /* CCM.swift in Sources */,
 				EEBDF94B237DB67A00079F38 /* Cryptor.swift in Sources */,
-				EEBDF967237DB67A00079F38 /* PBKDF1.swift in Sources */,
-				EEBDF932237DB67A00079F38 /* AEAD.swift in Sources */,
 				EEBDF953237DB67A00079F38 /* Operators.swift in Sources */,
 				EEBDF90C237DB67A00079F38 /* Account.swift in Sources */,
 				EEBDF96F237DB67A00079F38 /* GCM.swift in Sources */,
-				EEBDF8FE237DB67A00079F38 /* ByteStream.swift in Sources */,
 				EEBDF8F8237DB67A00079F38 /* BigInt+Extension.swift in Sources */,
 				EEBDF92D237DB67A00079F38 /* UInt64+Extension.swift in Sources */,
 				EEBDF943237DB67A00079F38 /* HMAC+Foundation.swift in Sources */,
-				EEBDF913237DB67A00079F38 /* EthereumRawTransaction.swift in Sources */,
-				EEBDF8F4237DB67A00079F38 /* EIP155Signer.swift in Sources */,
 				EEBDF962237DB67A00079F38 /* Padding.swift in Sources */,
 				EEBDF95B237DB67A00079F38 /* BlockDecryptor.swift in Sources */,
 				EEBDF944237DB67A00079F38 /* Data+Extension.swift in Sources */,
 				EEBDF936237DB67A00079F38 /* Bit.swift in Sources */,
-				EEBDF93F237DB67A00079F38 /* NoPadding.swift in Sources */,
-				EEBDF931237DB67A00079F38 /* AEADChaCha20Poly1305.swift in Sources */,
-				EEBDF905237DB67A00079F38 /* RLP.swift in Sources */,
 				EEBDF96A237DB67A00079F38 /* CBC.swift in Sources */,
 				EEBDF8F3237DB67A00079F38 /* Crypto.swift in Sources */,
 				EEBDF8F7237DB67A00079F38 /* BigNumber.swift in Sources */,
-				EEBDF912237DB67A00079F38 /* EthereumAddress.swift in Sources */,
 				EEBDF98E237DB67A00079F38 /* secp256k1.c in Sources */,
 				EEBDF907237DB67A00079F38 /* Bech32.swift in Sources */,
 				EEBDF930237DB67A00079F38 /* Cipher.swift in Sources */,
 				EEBDF947237DB67A00079F38 /* AES+Foundation.swift in Sources */,
-				EEBDF911237DB67A00079F38 /* ERC20.swift in Sources */,
 				EEBDF958237DB67A00079F38 /* BlockCipher.swift in Sources */,
 				EEBDF97C237DB67A00079F38 /* lax_der_parsing.c in Sources */,
 				EEBDF8FF237DB67A00079F38 /* String+Hex.swift in Sources */,
@@ -1078,31 +991,26 @@
 				EEBDF92E237DB67A00079F38 /* Cryptors.swift in Sources */,
 				EEBDF959237DB67A00079F38 /* Updatable.swift in Sources */,
 				EEBDF94F237DB67A00079F38 /* ZeroPadding.swift in Sources */,
-				EEBDF92F237DB67A00079F38 /* HKDF.swift in Sources */,
-				EEBDF910237DB67A00079F38 /* PrivateKey.swift in Sources */,
+				EEBDF910237DB67A00079F38 /* TendermintPrivateKey.swift in Sources */,
 				EEBDF954237DB67A00079F38 /* RandomBytesSequence.swift in Sources */,
 				EEBDF974237DB67A00079F38 /* Array+Extension.swift in Sources */,
 				EEBDF92B237DB67A00079F38 /* StreamDecryptor.swift in Sources */,
 				EEBDF934237DB67A00079F38 /* Int+Extension.swift in Sources */,
 				EEBDF933237DB67A00079F38 /* CBCMAC.swift in Sources */,
 				EEBDF8F5237DB67A00079F38 /* EllipticCurveEncrypterSecp256k1.swift in Sources */,
-				EEBDF90B237DB67A00079F38 /* KeystoreInterface.swift in Sources */,
 				EEBDF96E237DB67A00079F38 /* BlockMode.swift in Sources */,
 				EEBDF966237DB67A00079F38 /* PBKDF2.swift in Sources */,
 				EEBDF92C237DB67A00079F38 /* BlockEncryptor.swift in Sources */,
-				EEBDF906237DB67A00079F38 /* EIP55.swift in Sources */,
 				EEBDFC1B237FFD3600079F38 /* SeedFactory.swift in Sources */,
 				EEBDF935237DB67A00079F38 /* AES.Cryptors.swift in Sources */,
 				EEBDF92A237DB67A00079F38 /* AES.swift in Sources */,
 				EEBDF968237DB67A00079F38 /* BlockModeOptions.swift in Sources */,
 				EEBDF914237DB67A00079F38 /* TendermintCoin.swift in Sources */,
-				EEBDF96B237DB67A00079F38 /* ECB.swift in Sources */,
 				EEBDF942237DB67A00079F38 /* Utils+Foundation.swift in Sources */,
 				EEBDF903237DB67A00079F38 /* DataConvertable.swift in Sources */,
 				EEBDF95E237DB67A00079F38 /* Utils.swift in Sources */,
 				EEBDF939237DB67A00079F38 /* UInt16+Extension.swift in Sources */,
 				EEBDF952237DB67A00079F38 /* SHA3.swift in Sources */,
-				EEBDF938237DB67A00079F38 /* CMAC.swift in Sources */,
 				EEBDF950237DB67A00079F38 /* String+Extension.swift in Sources */,
 				EEBDF97B237DB67A00079F38 /* lax_der_privatekey_parsing.c in Sources */,
 				EEBDF8FD237DB67A00079F38 /* Typealiaces.swift in Sources */,
