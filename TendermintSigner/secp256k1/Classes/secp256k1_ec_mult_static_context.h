@@ -2,6 +2,7 @@
 #define _SECP256K1_ECMULT_STATIC_CONTEXT_
 #include "secp256k1/src/group.h"
 #define SC SECP256K1_GE_STORAGE_CONST
+
 static const secp256k1_ge_storage secp256k1_ecmult_static_context[64][16] = {
 {
     SC(983487347u, 1861041900u, 2599115456u, 565528146u, 1451326239u, 148794576u, 4224640328u, 3120843701u, 2076989736u, 3184115747u, 3754320824u, 2656004457u, 2876577688u, 2388659905u, 3527541004u, 1170708298u),
@@ -1158,3 +1159,4 @@ static const secp256k1_ge_storage secp256k1_ecmult_static_context[64][16] = {
 };
 #undef SC
 #endif
+

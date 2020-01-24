@@ -101,7 +101,7 @@
 		EEBDF973237DB67A00079F38 /* ChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF84E237DB67A00079F38 /* ChaCha20.swift */; };
 		EEBDF974237DB67A00079F38 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDF84F237DB67A00079F38 /* Array+Extension.swift */; };
 		EEBDF975237DB67A00079F38 /* secp256k1-config.h in Headers */ = {isa = PBXBuildFile; fileRef = EEBDF852237DB67A00079F38 /* secp256k1-config.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEBDF976237DB67A00079F38 /* secp256k1_ec_mult_static_context.h in Headers */ = {isa = PBXBuildFile; fileRef = EEBDF853237DB67A00079F38 /* secp256k1_ec_mult_static_context.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEBDF976237DB67A00079F38 /* secp256k1_ec_mult_static_context.h in Headers */ = {isa = PBXBuildFile; fileRef = EEBDF853237DB67A00079F38 /* secp256k1_ec_mult_static_context.h */; };
 		EEBDF977237DB67A00079F38 /* secp256k1_ecdh.h in Headers */ = {isa = PBXBuildFile; fileRef = EEBDF856237DB67A00079F38 /* secp256k1_ecdh.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEBDF978237DB67A00079F38 /* secp256k1_recovery.h in Headers */ = {isa = PBXBuildFile; fileRef = EEBDF857237DB67A00079F38 /* secp256k1_recovery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEBDF979237DB67A00079F38 /* secp256k1.h in Headers */ = {isa = PBXBuildFile; fileRef = EEBDF858237DB67A00079F38 /* secp256k1.h */; settings = {ATTRIBUTES = (Public, ); }; };

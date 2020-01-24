@@ -72,7 +72,10 @@ extension Data {
     }
     
     func to<T>(type: T.Type) -> T {
-        return self.withUnsafeBytes { $0.pointee }
+        return self.withUnsafeBytes { (ptr: UnsafeRawBufferPointer) in
+            let p = ptr.bindMemory(to: T.self).baseAddress!
+            return p.pointee
+        }
     }
     
     func to(type: String.Type) -> String {

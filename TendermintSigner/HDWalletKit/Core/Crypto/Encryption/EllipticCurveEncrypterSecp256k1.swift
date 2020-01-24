@@ -30,8 +30,10 @@ public class EllipticCurveEncrypterSecp256k1 {
     public func sign(hash: Data, privateKey: Data) -> secp256k1_ecdsa_recoverable_signature? {
         precondition(hash.count == 32, "Hash must be 32 bytes size")
         var signature = secp256k1_ecdsa_recoverable_signature()
-        let status = SecpResult(privateKey.withUnsafeBytes { (key: UnsafePointer<UInt8>) in
-            hash.withUnsafeBytes { secp256k1_ecdsa_sign_recoverable(context, &signature, $0, key, nil, nil) }
+        let status = SecpResult(privateKey.withUnsafeBytes { (key: UnsafeRawBufferPointer) in
+            hash.withUnsafeBytes { (p: UnsafeRawBufferPointer) in
+                let ptr = p.bindMemory(to: UInt8.self).baseAddress!
+                return secp256k1_ecdsa_sign_recoverable(context, &signature, ptr, key.bindMemory(to: UInt8.self).baseAddress!, nil, nil) }
         })
         return status == .success ? signature : nil
     }
@@ -43,8 +45,8 @@ public class EllipticCurveEncrypterSecp256k1 {
     public func export(signature: inout secp256k1_ecdsa_recoverable_signature) -> Data {
         var output = Data(count: 65)
         var recId = 0 as Int32
-        _ = output.withUnsafeMutableBytes { (output: UnsafeMutablePointer<UInt8>) in
-            secp256k1_ecdsa_recoverable_signature_serialize_compact(context, output, &recId, &signature)
+        _ = output.withUnsafeMutableBytes { (output: UnsafeMutableRawBufferPointer) in
+            secp256k1_ecdsa_recoverable_signature_serialize_compact(context, output.bindMemory(to: UInt8.self).baseAddress!, &recId, &signature)
         }
         
         output[64] = UInt8(recId)
@@ -60,8 +62,8 @@ public class EllipticCurveEncrypterSecp256k1 {
         precondition(signature.count == 65, "Signature must be 65 byte size")
         var sig = secp256k1_ecdsa_recoverable_signature()
         let recId = Int32(signature[64])
-        signature.withUnsafeBytes { (input: UnsafePointer<UInt8>) -> Void in
-            secp256k1_ecdsa_recoverable_signature_parse_compact(context, &sig, input, recId)
+        signature.withUnsafeBytes { (input: UnsafeRawBufferPointer) -> Void in
+            secp256k1_ecdsa_recoverable_signature_parse_compact(context, &sig, input.bindMemory(to: UInt8.self).baseAddress!, recId)
         }
         return sig
     }
@@ -91,8 +93,8 @@ public class EllipticCurveEncrypterSecp256k1 {
         var output = Data(count: compressed ? 33 : 65)
         var outputLen: Int = output.count
         let compressedFlags = compressed ? UInt32(SECP256K1_EC_COMPRESSED) : UInt32(SECP256K1_EC_UNCOMPRESSED)
-        output.withUnsafeMutableBytes { (pointer: UnsafeMutablePointer<UInt8>) -> Void in
-            secp256k1_ec_pubkey_serialize(context, pointer, &outputLen, &publicKey, compressedFlags)
+        output.withUnsafeMutableBytes { (pointer: UnsafeMutableRawBufferPointer) -> Void in
+            secp256k1_ec_pubkey_serialize(context, pointer.bindMemory(to: UInt8.self).baseAddress!, &outputLen, &publicKey, compressedFlags)
         }
         return output
     }

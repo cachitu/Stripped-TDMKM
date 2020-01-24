@@ -307,8 +307,8 @@ struct RIPEMD160 {
     }
     
     mutating private func update(data: Data) {
-        data.withUnsafeBytes { (ptr: UnsafePointer<UInt8>) in
-            var ptr = ptr
+        data.withUnsafeBytes { (ptr: UnsafeRawBufferPointer) in
+            var ptr = ptr.bindMemory(to: UInt8.self).baseAddress!
             var length = data.count
             var X = [UInt32](repeating: 0, count: 16)
             
@@ -316,7 +316,9 @@ struct RIPEMD160 {
             if buffer.count > 0 && buffer.count + length >= 64 {
                 let amount = 64 - buffer.count
                 buffer.append(ptr, count: amount)
-                buffer.withUnsafeBytes { _ = memcpy(&X, $0, 64) }
+                buffer.withUnsafeBytes { (ptr: UnsafeRawBufferPointer) in
+                    _ = memcpy(&X, ptr.bindMemory(to: UInt8.self).baseAddress!, 64)
+                }
                 compress(X)
                 ptr += amount
                 length -= amount
@@ -338,7 +340,9 @@ struct RIPEMD160 {
         var X = [UInt32](repeating: 0, count: 16)
         /* append the bit m_n == 1 */
         buffer.append(0x80)
-        buffer.withUnsafeBytes { _ = memcpy(&X, $0, buffer.count) }
+        buffer.withUnsafeBytes { (ptr: UnsafeRawBufferPointer) in
+            _ = memcpy(&X, ptr.bindMemory(to: UInt32.self).baseAddress!, buffer.count)
+        }
         
         if (count & 63) > 55 {
             /* length goes to next block */
@@ -354,7 +358,8 @@ struct RIPEMD160 {
         compress(X)
         
         var data = Data(count: 20)
-        data.withUnsafeMutableBytes { (ptr: UnsafeMutablePointer<UInt32>) in
+        data.withUnsafeMutableBytes { (p: UnsafeMutableRawBufferPointer) in
+            let ptr = p.bindMemory(to: UInt32.self).baseAddress!
             ptr[0] = MDbuf.0
             ptr[1] = MDbuf.1
             ptr[2] = MDbuf.2

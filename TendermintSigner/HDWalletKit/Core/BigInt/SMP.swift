@@ -163,7 +163,7 @@ infix operator ** : ExponentiationPrecedence
 ///        (ln * 2^(n*64))
 public struct BInt: SignedNumeric, // Implies Numeric, Equatable, ExpressibleByIntegerLiteral
     BinaryInteger, // Implies Hashable, CustomStringConvertible, Strideable, Comparable
-ExpressibleByFloatLiteral {
+ExpressibleByFloatLiteral, Hashable {
     //
     //
     // MARK: - Internal data
@@ -422,9 +422,9 @@ ExpressibleByFloatLiteral {
         return (self.sign, self.limbs)
     }
     
-    public var hashValue: Int {
-        return "\(self.sign)\(self.limbs)".hashValue
-    }
+//    public var hashValue: Int {
+//        return "\(self.sign)\(self.limbs)".hashValue
+//    }
     
     ///    A Boolean value indicating whether this type is a signed integer type.
     public static var isSigned: Bool {
@@ -463,7 +463,8 @@ ExpressibleByFloatLiteral {
         guard byteCount > 0 else { return Data()}
         
         var data = Data(count: byteCount)
-        data.withUnsafeMutableBytes { (p: UnsafeMutablePointer<UInt8>) -> Void in
+        data.withUnsafeMutableBytes { (ptr: UnsafeMutableRawBufferPointer) -> Void in
+            let p = ptr.bindMemory(to: UInt8.self).baseAddress!
             var i = byteCount - 1
             for var word in words {
                 for _ in 0 ..< UInt.bitWidth / 8 {
