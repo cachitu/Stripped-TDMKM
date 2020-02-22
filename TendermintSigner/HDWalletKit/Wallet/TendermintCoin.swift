@@ -15,6 +15,7 @@ public enum TendermintCoin {
     case iris
     case iris_fuxi
     case kava
+    case kava_118
     case bitsong
     case emoney
     case regen
@@ -47,7 +48,7 @@ public enum TendermintCoin {
         case .terra, .terra_118: return "terra"
         case .iris: return "iaa"
         case .iris_fuxi: return "faa"
-        case .kava: return "kava"
+        case .kava, .kava_118: return "kava"
         case .bitsong: return "bitsong"
         case .emoney: return "emoney"
         case .regen: return "xrn:"
@@ -60,7 +61,7 @@ public enum TendermintCoin {
         case .terra, .terra_118: return "terra"
         case .iris: return "iva"
         case .iris_fuxi: return "fva"
-        case .kava: return "kava"
+        case .kava, .kava_118: return "kava"
         case .bitsong: return "bitsong"
         case .emoney: return "emoney"
         case .regen: return "xrn:"
@@ -69,16 +70,17 @@ public enum TendermintCoin {
 
     public var coinType: UInt32 {
         switch self {
-        case .cosmos, .iris, .iris_fuxi,.kava, .bitsong, .terra_118, .emoney, .regen:
+        case .cosmos, .iris, .iris_fuxi, .kava_118, .bitsong, .terra_118, .emoney, .regen:
             return 118
         case .terra: return 330
+        case .kava: return 459
         }
     }
     
     public var scheme: String {
         switch self {
         case .cosmos: return "cosmos"
-        case .kava: return "kava"
+        case .kava, .kava_118: return "kava"
         case .iris, .iris_fuxi: return "iris"
         case .terra, .terra_118: return "terra"
         case .bitsong: return "bitsong"
