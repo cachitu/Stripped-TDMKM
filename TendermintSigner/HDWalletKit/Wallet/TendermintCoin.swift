@@ -19,6 +19,7 @@ public enum TendermintCoin {
     case bitsong
     case emoney
     case regen
+    case certik
 
     //https://github.com/satoshilabs/slips/blob/master/slip-0132.md
     public var privateKeyVersion: UInt32 {
@@ -52,6 +53,7 @@ public enum TendermintCoin {
         case .bitsong: return "bitsong"
         case .emoney: return "emoney"
         case .regen: return "xrn:"
+        case .certik: return "certik"
         }
     }
     
@@ -65,12 +67,13 @@ public enum TendermintCoin {
         case .bitsong: return "bitsong"
         case .emoney: return "emoney"
         case .regen: return "xrn:"
+        case .certik: return "certik"
         }
     }
 
     public var coinType: UInt32 {
         switch self {
-        case .cosmos, .iris, .iris_fuxi, .kava_118, .bitsong, .terra_118, .emoney, .regen:
+        case .cosmos, .iris, .iris_fuxi, .kava_118, .bitsong, .terra_118, .emoney, .regen, .certik:
             return 118
         case .terra: return 330
         case .kava: return 459
@@ -86,6 +89,7 @@ public enum TendermintCoin {
         case .bitsong: return "bitsong"
         case .emoney: return "emoney"
         case .regen: return "regen"
+        case .certik: return "certik"
         }
     }
 }

@@ -59,7 +59,7 @@ public struct TendermintPrivateKey {
     
     public func get() -> String {
         switch self.coin {
-        case .cosmos, .terra, .terra_118, .iris, .iris_fuxi, .kava, .kava_118, .bitsong, .emoney, .regen:
+        case .cosmos, .terra, .terra_118, .iris, .iris_fuxi, .kava, .kava_118, .bitsong, .emoney, .regen, .certik:
             return self.raw.toHexString()
        }
     }
