@@ -20,6 +20,7 @@ public enum TendermintCoin {
     case emoney
     case regen
     case certik
+    case microtick
 
     //https://github.com/satoshilabs/slips/blob/master/slip-0132.md
     public var privateKeyVersion: UInt32 {
@@ -54,6 +55,7 @@ public enum TendermintCoin {
         case .emoney: return "emoney"
         case .regen: return "xrn:"
         case .certik: return "certik"
+        case .microtick: return "micro"
         }
     }
     
@@ -68,28 +70,30 @@ public enum TendermintCoin {
         case .emoney: return "emoney"
         case .regen: return "xrn:"
         case .certik: return "certik"
+        case .microtick: return "micro"
         }
     }
 
     public var coinType: UInt32 {
         switch self {
-        case .cosmos, .iris, .iris_fuxi, .kava_118, .bitsong, .terra_118, .emoney, .regen, .certik:
+        case .cosmos, .iris, .iris_fuxi, .kava_118, .bitsong, .terra_118, .emoney, .regen, .certik, .microtick:
             return 118
         case .terra: return 330
         case .kava: return 459
         }
     }
     
-    public var scheme: String {
-        switch self {
-        case .cosmos: return "cosmos"
-        case .kava, .kava_118: return "kava"
-        case .iris, .iris_fuxi: return "iris"
-        case .terra, .terra_118: return "terra"
-        case .bitsong: return "bitsong"
-        case .emoney: return "emoney"
-        case .regen: return "regen"
-        case .certik: return "certik"
-        }
-    }
+//    public var scheme: String {
+//        switch self {
+//        case .cosmos: return "cosmos"
+//        case .kava, .kava_118: return "kava"
+//        case .iris, .iris_fuxi: return "iris"
+//        case .terra, .terra_118: return "terra"
+//        case .bitsong: return "bitsong"
+//        case .emoney: return "emoney"
+//        case .regen: return "regen"
+//        case .certik: return "certik"
+//        case .microtick: return "micro"
+//        }
+//    }
 }
