@@ -9,6 +9,7 @@
 import Foundation
 
 public enum TendermintCoin {
+    case stargate
     case cosmos
     case terra
     case terra_118
@@ -46,7 +47,7 @@ public enum TendermintCoin {
     
     public var addressPrefix: String {
         switch self {
-        case .cosmos: return "cosmos"
+        case .cosmos, .stargate: return "cosmos"
         case .terra, .terra_118: return "terra"
         case .iris: return "iaa"
         case .iris_fuxi: return "faa"
@@ -61,7 +62,7 @@ public enum TendermintCoin {
     
     public var validatorPrefix: String {
         switch self {
-        case .cosmos: return "cosmos"
+        case .cosmos, .stargate: return "cosmos"
         case .terra, .terra_118: return "terra"
         case .iris: return "iva"
         case .iris_fuxi: return "fva"
@@ -76,24 +77,9 @@ public enum TendermintCoin {
 
     public var coinType: UInt32 {
         switch self {
-        case .cosmos, .iris, .iris_fuxi, .kava_118, .bitsong, .terra_118, .emoney, .regen, .certik, .microtick:
-            return 118
         case .terra: return 330
         case .kava: return 459
+        default: return 118
         }
     }
-    
-//    public var scheme: String {
-//        switch self {
-//        case .cosmos: return "cosmos"
-//        case .kava, .kava_118: return "kava"
-//        case .iris, .iris_fuxi: return "iris"
-//        case .terra, .terra_118: return "terra"
-//        case .bitsong: return "bitsong"
-//        case .emoney: return "emoney"
-//        case .regen: return "regen"
-//        case .certik: return "certik"
-//        case .microtick: return "micro"
-//        }
-//    }
 }

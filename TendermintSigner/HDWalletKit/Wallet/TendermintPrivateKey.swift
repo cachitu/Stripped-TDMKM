@@ -58,10 +58,7 @@ public struct TendermintPrivateKey {
     }
     
     public func get() -> String {
-        switch self.coin {
-        case .cosmos, .terra, .terra_118, .iris, .iris_fuxi, .kava, .kava_118, .bitsong, .emoney, .regen, .certik, .microtick:
-            return self.raw.toHexString()
-       }
+        return self.raw.toHexString()
     }
     
     public func derived(at node: DerivationNode) -> TendermintPrivateKey {
