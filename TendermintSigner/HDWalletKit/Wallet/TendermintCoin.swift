@@ -54,7 +54,7 @@ public enum TendermintCoin {
         case .kava, .kava_118: return "kava"
         case .bitsong: return "bitsong"
         case .emoney: return "emoney"
-        case .regen: return "xrn:"
+        case .regen: return "regen:"
         case .certik: return "certik"
         case .microtick: return "micro"
         }
@@ -69,7 +69,7 @@ public enum TendermintCoin {
         case .kava, .kava_118: return "kava"
         case .bitsong: return "bitsong"
         case .emoney: return "emoney"
-        case .regen: return "xrn:"
+        case .regen: return "regen:"
         case .certik: return "certik"
         case .microtick: return "micro"
         }
