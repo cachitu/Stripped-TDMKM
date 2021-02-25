@@ -10,7 +10,6 @@ import Foundation
 
 public enum TendermintCoin {
     case stargate
-    case cosmos
     case terra
     case terra_118
     case iris
@@ -47,7 +46,7 @@ public enum TendermintCoin {
     
     public var addressPrefix: String {
         switch self {
-        case .cosmos, .stargate: return "cosmos"
+        case .stargate: return "cosmos"
         case .terra, .terra_118: return "terra"
         case .iris: return "iaa"
         case .iris_fuxi: return "faa"
@@ -62,7 +61,7 @@ public enum TendermintCoin {
     
     public var validatorPrefix: String {
         switch self {
-        case .cosmos, .stargate: return "cosmos"
+        case .stargate: return "cosmos"
         case .terra, .terra_118: return "terra"
         case .iris: return "iva"
         case .iris_fuxi: return "fva"
