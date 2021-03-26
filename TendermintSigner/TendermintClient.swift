@@ -26,6 +26,16 @@ public class TendermintClient {
         let wallet = Wallet(seed: seed, coin: coinType)
         let account = wallet.generateAccount()
         
+//        print(mnemonic)
+//        for index in 1...1000 {
+//            let conv = UInt32(index)
+//            let tmp = wallet.generateAccount(coinType: conv)
+//            if tmp.address == "agoric1k9z6k4cuqpmvn65aeppxwam9szy68nalec7kfk" {
+//                print("match at \(index)")
+//                break
+//            }
+//            print("\(index) -> \(tmp.address)")
+//        }
         return account
     }
     

@@ -33,6 +33,11 @@ public final class Wallet {
         return Account(privateKey: address)
     }
     
+    public func generateAccount(at index: UInt32 = 0, coinType: UInt32) -> Account {
+        let address = bip44PrivateKeyByCoin(cointType: coinType).derived(at: .notHardened(index))
+        return Account(privateKey: address)
+    }
+
     public func generateAccounts(count: UInt32) -> [Account]  {
         var accounts:[Account] = []
         for index in 0..<count {
@@ -51,7 +56,16 @@ public final class Wallet {
         let receive = account.derived(at: .notHardened(0))
         return receive
     }
-    
+
+    private func bip44PrivateKeyByCoin(cointType: UInt32) -> TendermintPrivateKey {
+        let bip44Purpose: UInt32 = 44
+        let purpose = privateKey.derived(at: .hardened(bip44Purpose))
+        let coinType = purpose.derived(at: .hardened(cointType))
+        let account = coinType.derived(at: .hardened(0))
+        let receive = account.derived(at: .notHardened(0))
+        return receive
+    }
+
     private func generatePrivateKey(at nodes:[DerivationNode]) -> TendermintPrivateKey {
         return privateKey(at: nodes)
     }
