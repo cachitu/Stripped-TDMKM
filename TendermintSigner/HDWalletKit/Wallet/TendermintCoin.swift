@@ -22,6 +22,7 @@ public enum TendermintCoin {
     case certik
     case microtick
     case agoric
+    case osmosis
 
     //https://github.com/satoshilabs/slips/blob/master/slip-0132.md
     public var privateKeyVersion: UInt32 {
@@ -58,6 +59,7 @@ public enum TendermintCoin {
         case .certik: return "certik"
         case .microtick: return "micro"
         case .agoric: return "agoric"
+        case .osmosis: return "osmo"
         }
     }
     
@@ -74,6 +76,7 @@ public enum TendermintCoin {
         case .certik: return "certik"
         case .microtick: return "micro"
         case .agoric: return "agoric"
+        case .osmosis: return "osmo"
         }
     }
 
