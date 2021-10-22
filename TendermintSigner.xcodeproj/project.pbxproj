@@ -1185,7 +1185,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.29;
+				MARKETING_VERSION = 1.1.30;
 				PRODUCT_BUNDLE_IDENTIFIER = kytzu.ipsx.TendermintSigner;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1214,7 +1214,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.29;
+				MARKETING_VERSION = 1.1.30;
 				PRODUCT_BUNDLE_IDENTIFIER = kytzu.ipsx.TendermintSigner;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

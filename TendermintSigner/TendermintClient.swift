@@ -22,15 +22,15 @@ public class TendermintClient {
     
     public func recoverKey(from mnemonic: String) -> Account {
         
-        let seed = SeedFactory().createSeed(mnemonic: mnemonic)
+        let seed = SeedFactory().createSeed(mnemonic: mnemonic, salt: "mnemonic")
         let wallet = Wallet(seed: seed, coin: coinType)
         let account = wallet.generateAccount()
-        
+//        print(account.address)
 //        print(mnemonic)
-//        for index in 1...1000 {
+//        for index in 0...3000 {
 //            let conv = UInt32(index)
 //            let tmp = wallet.generateAccount(coinType: conv)
-//            if tmp.address == "agoric1k9z6k4cuqpmvn65aeppxwam9szy68nalec7kfk" {
+//            if tmp.address == "evmos1txv5urhk8ex4qdx7n4x9d9kwh5ljwu522j9yvh" {
 //                print("match at \(index)")
 //                break
 //            }

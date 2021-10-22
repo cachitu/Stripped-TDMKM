@@ -15,8 +15,8 @@ public class SeedFactory {
     var derivedKeyData: Data?
     
     
-    func createSeed(mnemonic: String) -> Data {
-        guard let salt = ("mnemonic").decomposedStringWithCompatibilityMapping.data(using: .utf8) else {
+    func createSeed(mnemonic: String, salt: String) -> Data {
+        guard let salt = (salt).decomposedStringWithCompatibilityMapping.data(using: .utf8) else {
             fatalError("Nomalizing salt failed in \(self)")
         }
         return pbkdf2SHA512(password: mnemonic, salt: salt, keyByteCount: 64, rounds: 2048)!

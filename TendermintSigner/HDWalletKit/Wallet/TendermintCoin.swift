@@ -24,6 +24,7 @@ public enum TendermintCoin {
     case agoric
     case osmosis
     case juno
+    case evmos
 
     //https://github.com/satoshilabs/slips/blob/master/slip-0132.md
     public var privateKeyVersion: UInt32 {
@@ -62,6 +63,7 @@ public enum TendermintCoin {
         case .agoric: return "agoric"
         case .osmosis: return "osmo"
         case .juno: return "juno"
+        case .evmos: return "evmos"
         }
     }
     
@@ -80,6 +82,7 @@ public enum TendermintCoin {
         case .agoric: return "agoric"
         case .osmosis: return "osmo"
         case .juno: return "juno"
+        case .evmos: return "evmos"
         }
     }
 
@@ -89,6 +92,7 @@ public enum TendermintCoin {
         case .kava: return 459
         case .bitsong: return 639
         case .agoric: return 564
+        case .evmos: return 60
         default: return 118
         }
     }
